@@ -164,10 +164,3 @@ A partir del análisis realizado, se pueden destacar las siguientes conclusiones
 - 🧠 La comparación permitió observar que un modelo más complejo no necesariamente genera mejores predicciones.
 
 En conclusión, para este conjunto de datos, la regresión lineal fue el modelo más adecuado de los evaluados para estimar el precio de venta de los vehículos
-
-```text
-📦 DataExperience_Vehiculos
-│
-├── 📄 README.md
-├── 📓 proyecto_dataexperience.ipynb
-└── 📊 car_data.csv
