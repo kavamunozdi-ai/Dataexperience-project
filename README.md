@@ -2,11 +2,8 @@
 
 ## 📌 Descripción del proyecto
 
-Este proyecto fue desarrollado como parte de **Data Experience** y tiene como propósito analizar un conjunto de datos de vehículos usados para identificar qué características se relacionan con su precio de venta y evaluar qué tan útil es la información disponible para realizar predicciones.
-
-A través de diferentes etapas de exploración, limpieza, análisis estadístico y modelamiento predictivo, buscamos responder una pregunta central:
-
-> 🔎 **¿Qué factores se relacionan con el precio de venta de los vehículos usados y qué tan útil puede ser el precio actual para estimarlo?**
+Este proyecto fue desarrollado como parte de Data Experience y tiene como propósito analizar un conjunto de datos de vehículos usados para identificar qué características se relacionan con su precio de venta y evaluar qué tan útil es la información disponible para realizar predicciones.A través de diferentes etapas de exploración, limpieza, análisis estadístico y modelamiento predictivo, buscamos responder una pregunta central:
+🔎 **¿Qué factores se relacionan con el precio de venta de los vehículos usados y qué tan útil puede ser el precio actual para estimarlo?**
 
 ## 🎯 Objetivo
 
@@ -30,13 +27,13 @@ Entre las variables analizadas se encuentran:
 | `Transmission` | Tipo de transmisión |
 | `Owner` | Número de propietarios anteriores |
 
-El dataset original contaba con **301 registros y 9 variables**.
+El dataset original contaba con 301 registros y 9 variables.
 
-Después del proceso de limpieza se obtuvieron **299 registros**, eliminando registros duplicados y corrigiendo inconsistencias en los nombres de los vehículos.
+Después del proceso de limpieza se obtuvieron 299 registros, eliminando registros duplicados y corrigiendo inconsistencias en los nombres de los vehículos.
 
 # 🔎 Metodología
 
-El proyecto se desarrolló en **tres módulos principales**.
+El proyecto se desarrolló en tres módulos principales:
 
 ## 🧹 Módulo 1: Exploración y limpieza de datos
 
@@ -54,18 +51,11 @@ En esta primera etapa se realizó una revisión general del dataset para conocer
 
 ### Resultado
 
-El dataset pasó de:
-
-**301 registros → 299 registros**
-
-Después de la limpieza, no se identificaron valores nulos y se obtuvo una base más consistente para continuar con el análisis.
+El dataset pasó de:301 registros a 299 registros. Después de la limpieza, no se identificaron valores nulos y se obtuvo una base más consistente para continuar con el análisis.
 
 # 📈 Módulo 2: Análisis exploratorio
 
-En esta etapa se analizaron las principales características estadísticas de los datos y las relaciones entre las variables.
-
-Se utilizaron medidas como:
-
+En esta etapa se analizaron las principales características estadísticas de los datos y las relaciones entre las variables.Se utilizaron medidas como:
 - Media
 - Mediana
 - Moda
@@ -80,40 +70,21 @@ También se analizaron posibles valores atípicos y diferencias entre categoría
 
 ### 💰 Relación entre precio actual y precio de venta
 
-Uno de los principales descubrimientos fue la fuerte relación positiva entre:
-
-`Present_Price` ↔ `Selling_Price`
-
-con una correlación aproximada de:
-
-**📌 0,88**
+Uno de los principales descubrimientos fue la fuerte relación positiva entre:`Present_Price` ↔ `Selling_Price`con una correlación aproximada de:📌 0,88
 
 Esto indica que los vehículos con un mayor precio actual tienden a presentar también un mayor precio de venta.
 
 ### 🛣️ Relación con el kilometraje
 
-La correlación entre:
-
-`Kms_Driven` ↔ `Selling_Price`
-
-fue aproximadamente:
-
-**📌 0,03**
-
-Lo que representa una relación muy débil dentro de este conjunto de datos.
+La correlación entre:`Kms_Driven` ↔ `Selling_Price`fue aproximadamente:📌 0,03. Lo que representa una relación muy débil dentro de este conjunto de datos.
 
 ### 🚘 Tipo de transmisión
 
-También se observaron diferencias en el precio de venta promedio entre vehículos automáticos y manuales.
-
-Los vehículos automáticos presentaron un precio de venta promedio superior al de los vehículos manuales.
-
-Sin embargo, esta diferencia debe interpretarse teniendo en cuenta que los grupos no tienen el mismo número de observaciones.
+También se observaron diferencias en el precio de venta promedio entre vehículos automáticos y manuales.Los vehículos automáticos presentaron un precio de venta promedio superior al de los vehículos manuales.Sin embargo, esta diferencia debe interpretarse teniendo en cuenta que los grupos no tienen el mismo número de observaciones.
 
 ### ⚠️ Valores atípicos
 
 Se identificaron posibles valores atípicos principalmente en variables como:
-
 - `Selling_Price`
 - `Present_Price`
 - `Kms_Driven`
@@ -133,9 +104,7 @@ Para responderla, se utilizaron como variables predictoras:
 - `Kms_Driven`
 - `Owner`
 
-Y como variable objetivo:
-
-- `Selling_Price`
+Y como variable objetivo:`Selling_Price`
 
 Los datos se dividieron en:
 
@@ -194,7 +163,7 @@ A partir del análisis realizado, se pueden destacar las siguientes conclusiones
 - 📊 El modelo de regresión alcanzó un **R² de 0,7195** y un **RMSE de 2,6887**.
 - 🧠 La comparación permitió observar que un modelo más complejo no necesariamente genera mejores predicciones.
 
-En conclusión, para este conjunto de datos, la **regresión lineal fue el modelo más adecuado de los evaluados para estimar el precio de venta de los vehículos**.
+En conclusión, para este conjunto de datos, la regresión lineal fue el modelo más adecuado de los evaluados para estimar el precio de venta de los vehículos
 
 ```text
 📦 DataExperience_Vehiculos
